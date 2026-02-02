@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Digital Clock</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="glass-dark">
+
+<div class="clock-card">
+    <h2>Digital Clock</h2>
+
+    <div id="clock">00:00:00</div>
+    <div id="date">Day, DD Month YYYY</div>
+
+    <div class="controls">
+        <select onchange="changeTheme(this.value)">
+            <option value="glass-dark">Glass Dark</option>
+            <option value="glass-light">Glass Light</option>
+            <option value="purple">Purple</option>
+            <option value="cyber">Cyber</option>
+            <option value="ocean">Ocean</option>
+        </select>
+
+        <button onclick="toggleFormat()">12 / 24</button>
+        <button onclick="toggleSeconds()">Seconds</button>
+    </div>
+
+    <div class="slider">
+        <label>Font Size</label>
+        <input type="range" min="32" max="90" value="50"
+               oninput="changeFontSize(this.value)">
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
